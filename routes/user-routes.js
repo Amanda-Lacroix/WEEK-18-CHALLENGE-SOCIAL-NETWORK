@@ -1,31 +1,31 @@
 const router = require('express').Router();
 
 // Import the User model
-const { User } = require('../models');
+const {User} = require('../models');
 
 // API Routes
 
-// GET all thoughts
+// GET all users
 router.get('/', (req, res) => {
 
 });
 
-// GET a single thought by ID
+// GET a single user by ID
 router.get('/:id', (req, res) => {
 
 });
 
-// POST create a new thought
+// POST create a new user
 router.post('/', (req, res) => {
 
 });
 
-// PUT update a thought by ID
+// PUT update a user by ID
 router.put('/:id', (req, res) => {
 
 });
 
-// DELETE remove a thought by ID
+// DELETE remove a user by ID
 router.delete('/:id', (req, res) => {
 
 });
