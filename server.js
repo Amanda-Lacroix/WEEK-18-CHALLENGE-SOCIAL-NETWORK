@@ -14,7 +14,8 @@ mongoose.connect('mongodb://localhost/social_network_db', {
 
 
 // Routes
-
+app.use('/api/users', require('./routes/user-routes'));
+app.use('/api/thoughts', require('./routes/thought-routes'));
 
 // Start the server
 app.listen(PORT, () => {
