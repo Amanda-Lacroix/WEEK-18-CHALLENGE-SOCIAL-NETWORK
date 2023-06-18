@@ -1,4 +1,4 @@
-// server.js
+// Server.js
 const express = require('express');
 const mongoose = require('mongoose');
 
@@ -10,10 +10,6 @@ app.use(express.json());
 
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost/social_network_db', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false
 });
 
 
