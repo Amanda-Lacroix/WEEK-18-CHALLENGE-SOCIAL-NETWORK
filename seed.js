@@ -23,6 +23,17 @@ async function seedData() {
     ];
     const usersResult = await usersCollection.insertMany(userData);
     console.log(`${usersResult.insertedCount} documents inserted into 'users' collection.`);
+ 
+    //  Data fror thoughts
+ const thoughtsCollection = database.collection('thoughts');
+ const thoughtData = [
+   { thoughtText: 'Can you tell', createdAt: new Date(), username: 'BigBird', reactions: [] },
+   { thoughtText: 'me how to get', createdAt: new Date(), username: 'Grover', reactions: [] },
+   { thoughtText: 'how to get', createdAt: new Date(), username: 'Elmo', reactions: [] },
+   { thoughtText: 'to Sesame Street', createdAt: new Date(), username: 'CookieMonster', reactions: [] },
+ ];
+ const thoughtsResult = await thoughtsCollection.insertMany(thoughtData);
+ console.log(`${thoughtsResult.insertedCount} documents inserted into 'thoughts' collection.`);
 
 
   } 
