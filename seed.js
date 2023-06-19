@@ -8,7 +8,7 @@ async function seedData() {
     await client.connect();
 
     const database = client.db('week-18-challenge-social-network');
-    const collection = database.collection('week-18-challenge-social-network');
+    const collection = database.collection('user');
 
     // Data to be entered
     const data = [
