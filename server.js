@@ -12,8 +12,8 @@ mongoose.connect('mongodb://127.0.0.1/week-18-challenge-social-network')
 	.then(() => {
 		console.log('Connected to MongoDB');
 		// Routes
-		app.use('/api/users', require('./routes/user-routes'));
-		app.use('/api/thoughts', require('./routes/thought-routes'));
+		app.use('/api/User', require('./routes/user-routes'));
+		app.use('/api/Thought', require('./routes/thought-routes'));
 
 		// Start the server
 		app.listen(PORT, () => {
@@ -23,4 +23,4 @@ mongoose.connect('mongodb://127.0.0.1/week-18-challenge-social-network')
 	.catch(error => {
 		console.error('Error connecting to MongoDB:', error);
 	});
-	
+
