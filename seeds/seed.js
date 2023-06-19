@@ -12,9 +12,8 @@ async function seedData() {
 
     // Data to be entered
     const data = [
-      { username: 'John', email: 25. 
-      
-      
+      { username: 'test', email: 'test@test.com'}
+           
     ];
 
     // Inserting the data into the collection
