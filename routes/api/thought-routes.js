@@ -1,6 +1,6 @@
 const router = require('express').Router();
 // Import the User and Thought models
-const { User, Thought } = require('../../models');
+const { Thought, User } = require('../models');
 
 // API Routes
 

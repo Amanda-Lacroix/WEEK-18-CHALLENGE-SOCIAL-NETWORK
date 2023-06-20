@@ -1,26 +1,18 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const routes = require('./routes/api');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Middleware
+
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-// Connect to MongoDB
-mongoose.connect('mongodb://127.0.0.1/week-18-challenge-social-network')
-	.then(() => {
-		console.log('Connected to MongoDB');
-		// Routes
-		app.use('/model/User', require('./routes/user-routes'));
-		app.use('/model/Thought', require('./routes/thought-routes'));
-
+app.use(routes);
 		// Start the server
 		app.listen(PORT, () => {
 			console.log(`Server running on port ${PORT}`);
 		});
-	})
-	.catch(error => {
-		console.error('Error connecting to MongoDB:', error);
-	});
+
 

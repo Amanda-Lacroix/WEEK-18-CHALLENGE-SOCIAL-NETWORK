@@ -1,5 +1,6 @@
 // Importing the Mongoose library
 const mongoose = require('mongoose');
+const Thought = require('./Thought');
 
 const { Schema } = mongoose;
 // Defining the schema
